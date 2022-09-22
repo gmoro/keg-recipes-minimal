@@ -1,0 +1,21 @@
+image:
+  preferences:
+    - _include:
+        - base/suse/ALP
+  packages:
+    - _attributes:
+        type: bootstrap
+      _include:
+        - base/bootstrap/ALP
+    - _attributes:
+        type: image
+      _include:
+        - base/suse/ALP
+config:
+  - _include:
+      - base/suse/ALP
+#archive:
+#  - name: root.tar.gz
+#    _include:
+#      - csp/gce/settings/sles/byos
+#      - products/sles/byos

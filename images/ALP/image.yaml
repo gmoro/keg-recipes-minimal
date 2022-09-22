@@ -1,0 +1,21 @@
+#include-paths:
+#  - sle15
+image:
+  _attributes:
+    name: ALP
+    displayname: Adaptable Linux Platform
+    schemaversion: "7.2"
+  description:
+    _attributes:
+      type: system
+    specification: "Adaptable Linux Platform"
+    author: openSUSE Project
+    contact: crc@suse.com
+  profiles: {}
+  preferences: {}
+  repository:
+    - _attributes:
+        type: rpm-md
+      source:
+        _attributes:
+          path: obsrepositories:/
