@@ -1,0 +1,7 @@
+packages:
+  _namespace_filesystem:
+    package:
+      - btrfsprogs
+      - btrfsmaintenance
+      - snapper-zypp-plugin
+      - snapper

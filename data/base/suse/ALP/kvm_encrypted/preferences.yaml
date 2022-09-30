@@ -1,0 +1,11 @@
+preferences:
+  type:
+    _attributes:
+      luks_version: luks2
+      luks: 1234
+      luks_randomize: "false"
+    bootloader:
+      _attributes:
+        name: grub2
+        console: gfxterm
+        use_disk_password: "true"

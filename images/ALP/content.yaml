@@ -1,8 +1,32 @@
 image:
+  profiles: 
+    profile:
+      - _attributes:
+          name: kvm
+          description: KVM
+      - _attributes:
+          name: kvm_encrypted
+          description: KVM Encrypted
   preferences:
-    - _include:
-        - base/suse/ALP
+    - _attributes:
+        profiles: kvm
+      _include:
+        - base/suse/ALP/kvm
+    - _attributes:
+        profiles: [kvm_encrypted]
+      _include:
+        - base/suse/ALP/kvm_encrypted
   packages:
+    - _attributes:
+        type: image
+        profiles: [kvm]
+      _include:
+        - base/suse/ALP/kvm
+    - _attributes:
+        type: image
+        profiles: [kvm_encrypted]
+      _include:
+        - base/suse/ALP/kvm_encrypted
     - _attributes:
         type: bootstrap
       _include:
@@ -10,10 +34,13 @@ image:
     - _attributes:
         type: image
       _include:
-        - base/suse/ALP
+        - base/common
+        - base/suse/ALP/common
+        - base/suse/virt/kvm
+        - base/suse/filesystem/btrfs
 config:
   - _include:
-      - base/suse/ALP
+      - base/suse/ALP/common
 #archive:
 #  - name: root.tar.gz
 #    _include:

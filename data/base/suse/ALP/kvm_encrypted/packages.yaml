@@ -1,0 +1,12 @@
+packages:
+  _namespace_kvm_encrypted:
+    package:
+      - kernel-default
+      - device-mapper
+      - cryptsetup
+      - system-user-tss
+      - libtss2-fapi1
+      - libtss2-tcti-device0
+      - tpm2.0-tools
+      - tpm2-0-tss
+      - fde-tools

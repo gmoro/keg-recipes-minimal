@@ -1,0 +1,9 @@
+packages:
+  _namespace_ALP:
+    package:
+      - patterns-alp-basesystem
+      - patterns-alp-base-zypper
+      - patterns-alp-selinux
+      - patterns-alp-defaults
+      - patterns-alp-cockpit
+      - patterns-alp-container_runtime
