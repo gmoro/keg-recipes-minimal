@@ -11,11 +11,57 @@ image:
     specification: "Adaptable Linux Platform"
     author: openSUSE Project
     contact: crc@suse.com
-  profiles: {}
-  preferences: {}
   repository:
     - _attributes:
         type: rpm-md
       source:
         _attributes:
           path: obsrepositories:/
+  profiles: 
+    profile:
+      - _attributes:
+          name: kvm
+          description: KVM
+      - _attributes:
+          name: kvm_encrypted
+          description: KVM Encrypted
+  preferences:
+    - _attributes:
+        profiles: kvm
+      _include:
+        - base/suse/ALP/kvm
+    - _attributes:
+        profiles: [kvm_encrypted]
+      _include:
+        - base/suse/ALP/kvm_encrypted
+  packages:
+    - _attributes:
+        type: image
+        profiles: [kvm]
+      _include:
+        - base/suse/ALP/kvm
+    - _attributes:
+        type: image
+        profiles: [kvm_encrypted]
+      _include:
+        - base/suse/ALP/kvm_encrypted
+    - _attributes:
+        type: bootstrap
+      _include:
+        - base/bootstrap/ALP
+    - _attributes:
+        type: image
+      _include:
+        - base/common
+        - base/suse/ALP/common
+        - base/suse/virt/kvm
+        - base/suse/filesystem/btrfs
+config:
+  - _include:
+      - base/suse/ALP
+#archive:
+#  - name: root.tar.gz
+#    _include:
+#      - csp/gce/settings/sles/byos
+#      - products/sles/byos
+
