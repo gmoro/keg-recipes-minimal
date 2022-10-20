@@ -9,3 +9,7 @@ preferences:
         name: grub2
         console: gfxterm
         use_disk_password: "true"
+    size:
+      _attributes:
+        unit: "G"
+      _text: 4
