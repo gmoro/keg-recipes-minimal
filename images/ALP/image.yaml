@@ -8,7 +8,7 @@ image:
   description:
     _attributes:
       type: system
-    specification: "Adaptable Linux Platform"
+    specification: "ALP"
     author: openSUSE Project
     contact: crc@suse.com
   repository:
@@ -37,6 +37,11 @@ image:
   packages:
     - _attributes:
         type: image
+        profiles: [kvm, kvm_encrypted]
+      _include:
+        - base/suse/virt/kvm
+    - _attributes:
+        type: image
         profiles: [kvm]
       _include:
         - base/suse/ALP/kvm
@@ -54,7 +59,6 @@ image:
       _include:
         - base/common
         - base/suse/ALP/common
-        - base/suse/virt/kvm
         - base/suse/filesystem/btrfs
 config:
   - _include:
