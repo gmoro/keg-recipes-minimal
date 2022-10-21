@@ -1,0 +1,10 @@
+preferences:
+  type:
+    systemdisk:
+      _namespace_volume_x86_64:
+        volume:
+          - _attributes:
+              name: boot/grub2/i386-pc
+          - _attributes:
+              name: boot/grub2/x86_64-efi
+              mountpoint: boot/grub2/x86_64-efi
