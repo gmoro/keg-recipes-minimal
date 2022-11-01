@@ -30,32 +30,32 @@ image:
         profiles: kvm
         arch: x86_64
       _include:
-        - base/arch/x86_64
+        - base/bootloader/grub2/arch/x86_64
         - base/suse/ALP/kvm
     - _attributes:
         profiles: kvm_encrypted
         arch: x86_64
       _include:
-        - base/arch/x86_64
+        - base/bootloader/grub2/arch/x86_64
         - base/suse/ALP/kvm_encrypted
     - _attributes:
         profiles: kvm
         arch: aarch64
       _include:
-        - base/arch/aarch64
+        - base/bootloader/grub2/arch/aarch64
         - base/suse/ALP/kvm
     - _attributes:
         profiles: kvm_encrypted
         arch: aarch64
       _include:
-        - base/arch/aarch64
+        - base/bootloader/grub2/arch/aarch64
         - base/suse/ALP/kvm_encrypted
   packages:
     - _attributes:
         type: image
         profiles: [kvm, kvm_encrypted]
       _include:
-        - base/suse/virt/kvm
+        - base/virt/kvm
     - _attributes:
         type: image
         profiles: [kvm]
@@ -75,7 +75,7 @@ image:
       _include:
         - base/common
         - base/suse/ALP/common
-        - base/suse/filesystem/btrfs
+        - base/filesystem/btrfs
 config:
   - _include:
       - base/suse/ALP
