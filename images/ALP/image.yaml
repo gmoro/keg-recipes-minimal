@@ -74,8 +74,11 @@ image:
         type: image
       _include:
         - base/common
-        - base/suse/ALP/common
+        - base/network/networkmanager
+        - base/network/firewalld
+        - base/initial-config/microos
         - base/filesystem/btrfs
+        - base/suse/ALP/common
 config:
   - _include:
       - base/suse/ALP
