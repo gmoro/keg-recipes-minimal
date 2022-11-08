@@ -2,3 +2,4 @@ packages:
   _namespace_config_jeos-firstboot:
     package:
       - jeos-firstboot
+      - fbiterm

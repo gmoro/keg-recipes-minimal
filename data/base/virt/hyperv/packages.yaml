@@ -1,0 +1,4 @@
+packages:
+  _namespace_hyperv
+    package:
+      - hyper-v

@@ -1,0 +1,4 @@
+packages:
+  _namespace_vmware:
+    package:
+      - open-vm-tools

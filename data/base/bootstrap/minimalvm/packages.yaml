@@ -1,0 +1,10 @@
+packages:
+  _namespace_bootstrap:
+    package:
+      - filesystem
+      - glibc-locale-base
+      - ca-certificates-mozilla
+      - openSUSE-release
+      - awk
+      - coreutils
+      - gzip
