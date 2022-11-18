@@ -73,6 +73,7 @@ image:
         type: image
       _include:
         - base/common
+        - base/opensuse/minimalvm
     - _attributes:
         type: image
         profiles: [kvm-and-xen,VMware,MS-HyperV]
@@ -110,13 +111,6 @@ image:
         - base/initial-config/cloud-init
         - base/virt/kvm
     - _attributes:
-        type: image
-        profiles: [Cloud]
-      _include:
-        - base/filesystems/xfs
-        - base/initial-config/cloud-init
-        - base/virt/kvm
-    - _attributes:
         type: bootstrap
       _include:
         - base/bootstrap/minimalvm
@@ -124,22 +118,22 @@ image:
         type: bootstrap
         profiles: [kvm-and-xen]
       _include:
-        - base/opensuse/minimalvm/bootstrap/kvm-and-xen
+        - base/bootstrap/kvm-and-xen
     - _attributes:
         type: bootstrap
         profiles: [Cloud]
       _include:
-        - base/opensuse/minimalvm/bootstrap/cloud
+        - base/bootstrap/cloud
     - _attributes:
         type: bootstrap
         profiles: [MS-HyperV]
       _include:
-        - base/opensuse/minimalvm/bootstrap/mshyperv
+        - base/bootstrap/mshyperv
     - _attributes:
         type: bootstrap
         profiles: [VMware]
       _include:
-        - base/opensuse/minimalvm/bootstrap/vmware
+        - base/bootstrap/vmware
 config:
   - _include:
       - base/opensuse/minimalvm

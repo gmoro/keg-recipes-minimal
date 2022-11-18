@@ -1,4 +1,7 @@
 packages:
-  _namespace_kernel:
+  _namespace_minimal_common:
     package:
       - kernel-default-base
+      - patterns-base-base
+      - patterns-base-apparmor
+      - systemd-logger

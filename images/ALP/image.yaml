@@ -74,7 +74,7 @@ image:
         type: image
       _include:
         - base/common
-        - base/network/networkmanager
+        - base/network/NetworkManager
         - base/network/firewalld
         - base/initial-config/microos
         - base/filesystem/btrfs
