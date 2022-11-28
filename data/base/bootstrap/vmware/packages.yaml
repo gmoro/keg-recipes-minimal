@@ -1,0 +1,4 @@
+packages:
+  _namespace_bootstrap_appliance:
+    package:
+      - openSUSE-release-appliance-vmware
