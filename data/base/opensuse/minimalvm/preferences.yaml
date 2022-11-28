@@ -11,10 +11,12 @@ preferences:
       firmware: uefi
       bootpartition: "false"
       bootkernel: custom
+      efipartsize: 33
       devicepersistency: by-uuid
       btrfs_quota_groups: "true"
       btrfs_root_is_snapshot: "true"
       bundle_format: "%N-VM.%A-%M.%m.%p-%I"
+      kernelcmdline: "rw quiet systemd.show_status=1 console=ttyS0,115200 console=tty0"
     systemdisk:
       _namespace_volume:
         volume:
