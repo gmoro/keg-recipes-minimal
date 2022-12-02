@@ -1,0 +1,8 @@
+preferences:
+  type:
+    _attributes:
+      image: oem
+      filesystem: xfs
+      format: qcow2
+      kernelcmdline: "hvc_iucv=8 TERM=dumb quiet net.ifnames=0"
+      devicepersistency: "by-uuid"

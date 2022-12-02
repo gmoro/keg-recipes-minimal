@@ -1,0 +1,37 @@
+preferences:
+  version: 1.0.0
+  packagemanager: zypper
+  bootloader-theme: openSUSE
+  rpm-excludedocs: "true"
+  type:
+    _attributes:
+      image: oem
+      bootkernel: custom
+      bootpartition: "true"
+      bootpartsize: "300"
+      bootfilesystem: "ext2"
+      bootloader: "grub2_s390x_emu"
+      btrfs_quota_groups: "true"
+      btrfs_root_is_snapshot: "true"
+      bundle_format: "%N-VM.%A-%M.%m.%p-%I"
+    systemdisk:
+      _namespace_volume:
+        volume:
+          - _attributes:
+              name: home
+          - _attributes:
+              name: root
+          - _attributes:
+              name: opt
+          - _attributes:
+              name: srv
+          - _attributes:
+              name: usr/local
+          - _attributes:
+              name: var
+              copy_on_write: "false"
+    size:
+      _attributes:
+        unit: "G"
+      _text: 24
+

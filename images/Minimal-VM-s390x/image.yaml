@@ -1,0 +1,97 @@
+image:
+  _attributes:
+    name: Minimal-VM-s390
+    displayname: "SLES 15 SP5"
+    schemaversion: "7.1"
+  description:
+    _attributes:
+      type: system
+    specification: "SLES 15 SP5"
+    author: SUSE
+    contact: crc@suse.com
+  repository:
+    - _attributes:
+        type: rpm-md
+      source:
+        _attributes:
+          path: obsrepositories:/
+  profiles: 
+    profile:
+      - _attributes:
+          name: kvm
+          description: Minimal Image for KVM
+      - _attributes:
+          name: Cloud
+          description: Minimal Image for Cloud
+      - _attributes:
+          name: dasd
+          description: Minimal Image for ZSystems
+      - _attributes:
+          name: dasd-Cloud
+          description: Minimal Image for Cloud on DASD
+  preferences:
+    - _attributes:
+        profiles: kvm
+      _include:
+        - base/bootloader/grub2/arch/s390x
+        - base/suse/minimalvm-s390/kvm
+    - _attributes:
+        profiles: Cloud
+      _include:
+        - base/bootloader/grub2/arch/s390x
+        - base/suse/minimalvm-s390/cloud
+    - _attributes:
+        profiles: dasd
+      _include:
+        - base/bootloader/grub2/arch/s390x
+        - base/suse/minimalvm-s390/dasd
+    - _attributes:
+        profiles: dasd-Cloud
+      _include:
+        - base/bootloader/grub2/arch/s390x
+        - base/suse/minimalvm-s390/dasd
+        - base/suse/minimalvm-s390/dasd-cloud
+  packages:
+    - _attributes:
+        type: image
+      _include:
+        - base/common
+        - base/opensuse/minimalvm
+    - _attributes:
+        type: image
+        profiles: [kvm, dasd]
+      _include:
+        - base/filesystems/btrfs
+        - base/initial-config/jeos-firstboot
+        - base/network/firewalld
+    - _attributes:
+        type: image
+        profiles: [kvm, dasd]
+      _include:
+        - base/network/NetworkManager
+        - base/secureboot
+    - _attributes:
+        type: image
+        profiles: [kvm, Cloud]
+      _include:
+        - base/virt/kvm
+    - _attributes:
+        type: image
+        profiles: [Cloud, dasd-cloud]
+      _include:
+        - base/filesystems/xfs
+        - base/initial-config/cloud-init
+        - base/virt/kvm
+    - _attributes:
+        type: bootstrap
+      _include:
+        - base/bootstrap/minimalvm
+config:
+  - _include:
+      - base/opensuse/minimalvm
+#archive:
+#  - name: root.tar.gz
+#    _include:
+#      - csp/gce/settings/sles/byos
+#      - products/sles/byos
+
