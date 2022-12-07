@@ -1,4 +1,0 @@
-<multibuild>
-    <flavor>kvm</flavor>
-    <flavor>kvm_encrypted</flavor>
-</multibuild>

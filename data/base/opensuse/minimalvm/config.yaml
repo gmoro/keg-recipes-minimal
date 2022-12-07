@@ -1,0 +1,17 @@
+config:
+  scripts:
+    common-config:
+      - config-sh-header
+      - xts
+      - fonts
+      - reset-machine-settings
+      - systemd-default-target
+      - enable-firstboot-config
+      - network-manager
+      - add-yast-repos
+      - snapper-configuration
+      - chrony
+      - zypper-config-minimal
+  services:
+    common-services:
+      - sshd

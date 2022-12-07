@@ -1,0 +1,8 @@
+preferences:
+  type:
+    _attributes:
+      image: oem
+      filesystem: btrfs
+      format: qcow2
+      kernelcmdline: "hvc_iucv=8 TERM=dumb quiet"
+      devicepersistency: "by-uuid"

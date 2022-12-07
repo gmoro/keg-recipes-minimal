@@ -1,0 +1,7 @@
+packages:
+  _namespace_config_microos:
+    package:
+      - ignition-dracut
+      - combustion
+      - growpart-generator
+      - jeos-firstboot

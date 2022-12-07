@@ -1,5 +1,3 @@
-#include-paths:
-#  - sle15
 image:
   _attributes:
     name: ALP
@@ -8,7 +6,7 @@ image:
   description:
     _attributes:
       type: system
-    specification: "Adaptable Linux Platform"
+    specification: "ALP"
     author: openSUSE Project
     contact: crc@suse.com
   repository:
@@ -21,20 +19,43 @@ image:
     profile:
       - _attributes:
           name: kvm
-          description: KVM
+          description: Minimal Image for KVM
+          arch: [aarch64, x86_64]
       - _attributes:
           name: kvm_encrypted
-          description: KVM Encrypted
+          description: Minimal Encrypted Image for KVM
+          arch: [aarch64, x86_64]
   preferences:
     - _attributes:
         profiles: kvm
+        arch: x86_64
       _include:
+        - base/bootloader/grub2/arch/x86_64
         - base/suse/ALP/kvm
     - _attributes:
-        profiles: [kvm_encrypted]
+        profiles: kvm_encrypted
+        arch: x86_64
       _include:
+        - base/bootloader/grub2/arch/x86_64
+        - base/suse/ALP/kvm_encrypted
+    - _attributes:
+        profiles: kvm
+        arch: aarch64
+      _include:
+        - base/bootloader/grub2/arch/aarch64
+        - base/suse/ALP/kvm
+    - _attributes:
+        profiles: kvm_encrypted
+        arch: aarch64
+      _include:
+        - base/bootloader/grub2/arch/aarch64
         - base/suse/ALP/kvm_encrypted
   packages:
+    - _attributes:
+        type: image
+        profiles: [kvm, kvm_encrypted]
+      _include:
+        - base/virt/kvm
     - _attributes:
         type: image
         profiles: [kvm]
@@ -53,9 +74,11 @@ image:
         type: image
       _include:
         - base/common
+        - base/network/NetworkManager
+        - base/network/firewalld
+        - base/initial-config/microos
+        - base/filesystem/btrfs
         - base/suse/ALP/common
-        - base/suse/virt/kvm
-        - base/suse/filesystem/btrfs
 config:
   - _include:
       - base/suse/ALP

@@ -1,9 +1,8 @@
 preferences:
-  version: 0.0.1
+  version: 1.0.0
   packagemanager: zypper
   bootloader-theme: openSUSE
   rpm-excludedocs: "true"
-  locale: en_US
   type:
     _attributes:
       image: vmx
@@ -12,24 +11,23 @@ preferences:
       firmware: uefi
       bootpartition: "false"
       bootkernel: custom
+      efipartsize: 33
       devicepersistency: by-uuid
       btrfs_quota_groups: "true"
       btrfs_root_is_snapshot: "true"
-      btrfs_root_is_readonly_snapshot: "true"
       bundle_format: "%N-VM.%A-%M.%m.%p-%I"
+      kernelcmdline: "rw quiet systemd.show_status=1 console=ttyS0,115200 console=tty0"
     systemdisk:
       _namespace_volume:
         volume:
           - _attributes:
-              name:  home
+              name: home
           - _attributes:
-              name:  root
+              name: root
           - _attributes:
               name: opt
           - _attributes:
               name: srv
-          - _attributes:
-              name: boot/writable
           - _attributes:
               name: usr/local
           - _attributes:

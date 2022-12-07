@@ -1,0 +1,5 @@
+packages:
+  _namespace_xen:
+    package:
+      - xen-libs
+      - xen-tools-domU
