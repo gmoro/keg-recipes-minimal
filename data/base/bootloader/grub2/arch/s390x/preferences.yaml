@@ -1,0 +1,8 @@
+preferences:
+  type:
+    systemdisk:
+      _namespace_volume_s390x:
+        volume:
+          - _attributes:
+              name: boot/grub2/s390x-emu
+              mountpoint: boot/grub2/s390x-emu
