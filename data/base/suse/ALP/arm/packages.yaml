@@ -1,0 +1,5 @@
+packages:
+  _namespace_arm:
+    package:
+      - kernel-default
+      - kernel-firmware-all
