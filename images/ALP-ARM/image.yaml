@@ -1,0 +1,46 @@
+image:
+  _attributes:
+    name: ALP-UEFI-rpi
+    displayname: "Adaptable Linux Platform"
+    schemaversion: "7.1"
+  description:
+    _attributes:
+      type: system
+    specification: "ALP aarch64 Image for rpi"
+    author: SUSE
+    contact: crc@suse.com
+  repository:
+    - _attributes:
+        type: rpm-md
+      source:
+        _attributes:
+          path: obsrepositories:/
+  preferences:
+    - _include:
+        - base/suse/ALP/common
+        - base/suse/ALP/arm
+        - base/bootloader/grub2/arch/aarch64
+  packages:
+    - _attributes:
+        type: bootstrap
+      _include:
+        - base/bootstrap/ALP
+    - _attributes:
+        type: image
+      _include:
+        - base/common
+        - base/suse/ALP/common
+        - base/suse/ALP/arm
+        - base/network/NetworkManager
+        - base/network/firewalld
+        - base/initial-config/microos
+        - base/filesystem/btrfs
+config:
+  - _include:
+      - base/suse/ALP
+#archive:
+#  - name: root.tar.gz
+#    _include:
+#      - csp/gce/settings/sles/byos
+#      - products/sles/byos
+

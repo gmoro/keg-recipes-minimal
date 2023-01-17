@@ -1,6 +1,7 @@
 preferences:
   type:
     _attributes:
+      format: qcow2
       luks_version: luks2
       luks: 1234
       luks_randomize: "false"

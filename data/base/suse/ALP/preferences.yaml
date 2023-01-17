@@ -6,9 +6,8 @@ preferences:
   locale: en_US
   type:
     _attributes:
-      image: vmx
+      image: oem
       filesystem: btrfs
-      format: qcow2
       firmware: uefi
       bootpartition: "false"
       bootkernel: custom
