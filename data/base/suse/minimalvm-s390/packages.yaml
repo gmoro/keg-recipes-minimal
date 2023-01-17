@@ -4,4 +4,3 @@ packages:
       - kernel-default-base
       - patterns-base-base
       - patterns-base-apparmor
-      - systemd-logger
