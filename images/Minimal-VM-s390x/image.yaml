@@ -69,7 +69,6 @@ image:
         profiles: [kvm, dasd]
       _include:
         - base/network/NetworkManager
-        - base/secureboot
     - _attributes:
         type: image
         profiles: [kvm, Cloud]
