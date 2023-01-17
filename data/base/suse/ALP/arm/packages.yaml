@@ -3,3 +3,10 @@ packages:
     package:
       - kernel-default
       - kernel-firmware-all
+      - raspberrypi-firmware
+      - raspberrypi-firmware-config
+      - raspberrypi-firmware-dt
+      - arm-trusted-firmware-rpi4
+      - u-boot-rpiarm64
+      - raspberrypi-eeprom
+      - bcm43xx-firmware

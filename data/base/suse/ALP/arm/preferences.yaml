@@ -2,6 +2,8 @@ preferences:
   type:
     _attributes:
       filesystem: btrfs
+      initrd_system: "dracut"
+      editbootinstall: "editbootinstall_rpi.sh"
       fsmountoptions: "noatime,compress=lzo"
       bootloader_console: "serial"
       kernelcmdline: "systemd.show_status=1 console=ttyS0,115200 console=tty quiet"

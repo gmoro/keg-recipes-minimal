@@ -1,12 +1,12 @@
 image:
   _attributes:
-    name: ALP-ARM
-    displayname: "ALP-ARM"
+    name: ALP-UEFI-rpi
+    displayname: "Adaptable Linux Platform"
     schemaversion: "7.1"
   description:
     _attributes:
       type: system
-    specification: "ALP ARM Image"
+    specification: "ALP aarch64 Image for rpi"
     author: SUSE
     contact: crc@suse.com
   repository:
