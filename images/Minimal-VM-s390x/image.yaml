@@ -88,7 +88,7 @@ image:
         - base/bootstrap/minimalvm
 config:
   - _include:
-      - base/suse/minimalvm-s390x
+      - base/suse/minimalvm-s390
 #archive:
 #  - name: root.tar.gz
 #    _include:
