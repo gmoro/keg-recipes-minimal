@@ -8,7 +8,6 @@ config:
       - systemd-default-target
       - enable-firstboot-config
       - network-manager
-      - add-yast-repos
       - snapper-configuration
       - chrony
       - zypper-config-minimal
