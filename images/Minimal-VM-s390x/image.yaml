@@ -55,7 +55,7 @@ image:
     - _attributes:
         type: image
       _include:
-        - base/common
+        - base/suse/common
         - base/opensuse/minimalvm
     - _attributes:
         type: image
