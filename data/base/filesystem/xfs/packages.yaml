@@ -1,3 +1,4 @@
 packages:
+  _namespace_filesystem_xfs:
     package:
       - xfsprogs

@@ -4,7 +4,6 @@ packages:
       - filesystem
       - glibc-locale-base
       - ca-certificates-mozilla
-      - openSUSE-release
       - awk
       - coreutils
       - gzip

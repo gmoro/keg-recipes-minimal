@@ -50,18 +50,18 @@ image:
       _include:
         - base/bootloader/grub2/arch/s390x
         - base/suse/minimalvm-s390/dasd
-        - base/suse/minimalvm-s390/dasd-cloud
+        - base/suse/minimalvm-s390/cloud
   packages:
     - _attributes:
         type: image
       _include:
-        - base/common
+        - base/suse/common
         - base/opensuse/minimalvm
     - _attributes:
         type: image
         profiles: [kvm, dasd]
       _include:
-        - base/filesystems/btrfs
+        - base/filesystem/btrfs
         - base/initial-config/jeos-firstboot
         - base/network/firewalld
     - _attributes:
@@ -69,7 +69,6 @@ image:
         profiles: [kvm, dasd]
       _include:
         - base/network/NetworkManager
-        - base/secureboot
     - _attributes:
         type: image
         profiles: [kvm, Cloud]
@@ -79,7 +78,7 @@ image:
         type: image
         profiles: [Cloud, dasd-cloud]
       _include:
-        - base/filesystems/xfs
+        - base/filesystem/xfs
         - base/initial-config/cloud-init
         - base/virt/kvm
     - _attributes:
@@ -88,7 +87,7 @@ image:
         - base/bootstrap/minimalvm
 config:
   - _include:
-      - base/opensuse/minimalvm
+      - base/suse/minimalvm-s390
 #archive:
 #  - name: root.tar.gz
 #    _include:
